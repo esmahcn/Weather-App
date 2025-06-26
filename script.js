@@ -15,39 +15,38 @@ async function getWeather() {
     );
     const data = await res.json();
 
+
+    const iconCode = data.weather[0].icon;
+    const description = data.weather[0].description;
+
+
     if (data.cod !== 200) {
       weatherBox.innerHTML = `<p>❌ City not found. Try again.</p>`;
       return;
     }
 
-    console.log(data)
+    console.log(data);
+
     const name = data.name;
     const country = data.sys.country;
-    const temp = data.main.temp;
+    const temp = Math.round(data.main.temp);
     const humidity = data.main.humidity;
-    const icon = data.weather[0].main;
     const wind = data.wind.speed;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
-    let emoji = "☁️";
-    if (icon === "Clear") emoji = "☀️";
-    else if (icon === "Rain") emoji = "🌧";
-    else if (icon === "Thunderstorm") emoji = "⛈";
-    else if (icon === "Snow") emoji = "❄️";
-    else if (icon === "Drizzle") emoji = "🌦";
-    else if (icon === "Clouds") emoji = "☁️";
+
+
 
     // affichage
     weatherBox.innerHTML = `
-    <h2>${name} ${emoji}</h2>
-     <p>country: ${country}</p>
-    <p>Température: ${temp}°C</p>
-    <p>Humidité: ${humidity}%</p>
-    <p>Vent: ${wind} m/s</p>
-  `;
-
-  }
-
-  catch (error) {
+      <h2>${name}, ${country} </h2>
+      <img src="${iconUrl}" alt="${description}">
+      <p>${description}</p>
+      <p>Température: ${temp}°C</p>
+      <p>Humidité: ${humidity}%</p>
+      <p>Vent: ${wind} m/s</p>
+    `;
+  } catch (error) {
     console.error("Error fetching weather:", error);
     weatherBox.innerHTML = `<p>⚠️ Something went wrong. Please try again later.</p>`;
   }
