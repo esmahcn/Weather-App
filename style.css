@@ -1,72 +1,72 @@
  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Arial, sans-serif;
+ }
 
-    body {
-      background-color: #121212;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+ body {
+     background-color: #121212;
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+ }
 
-    .container {
-      background: linear-gradient(to right, #6a11cb, #2575fc);
-      padding: 30px;
-      border-radius: 20px;
-      text-align: center;
-      width: 280px;
-    }
+ .container {
+     background: linear-gradient(to right, #6a11cb, #2575fc);
+     padding: 80px;
+     border-radius: 20px;
+     text-align: center;
+     width: 500px;
+ }
 
-    .container h1 {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
+ .container h1 {
+     font-size: 18px;
+     margin-bottom: 20px;
+ }
 
-    .search {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
+ .search {
+     display: flex;
+     justify-content: center;
+     margin-bottom: 20px;
+ }
 
-    .search input {
-      padding: 10px;
-      border: none;
-      border-radius: 10px 0 0 10px;
-      outline: none;
-      width: 140px;
-    }
+ .search input {
+     padding: 10px;
+     border: none;
+     border-radius: 10px 0 0 10px;
+     outline: none;
+     width: 140px;
+ }
 
-    .search button {
-      padding: 10px;
-      border: none;
-      background-color: white;
-      color: #333;
-      cursor: pointer;
-      border-radius: 0 10px 10px 0;
-    }
+ .search button {
+     padding: 10px;
+     border: none;
+     background-color: white;
+     color: #333;
+     cursor: pointer;
+     border-radius: 0 10px 10px 0;
+ }
 
-    .weather-icon {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
+ .weather-icon {
+     font-size: 40px;
+     margin-bottom: 10px;
+ }
 
-    .temp {
-      font-size: 32px;
-    }
+ .temp {
+     font-size: 32px;
+ }
 
-    .city {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
+ .city {
+     font-size: 18px;
+     margin-bottom: 20px;
+ }
 
-    .details {
-      display: flex;
-      justify-content: space-between;
-      font-size: 14px;
-      margin-top: 20px;
-    }
+ .details {
+     display: flex;
+     justify-content: space-between;
+     font-size: 14px;
+     margin-top: 20px;
+ }
